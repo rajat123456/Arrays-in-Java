@@ -1,3 +1,9 @@
+//Array Left Rotation 
+//Method 1(By Using Temporary Array)
+//Space Complexity is O(d)->size of temporary array
+//Time Complexity is O(n)-> To shift elements 
+
+
 package ooo;
 
 import java.util.Scanner;
