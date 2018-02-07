@@ -38,7 +38,7 @@ class Samsung
 		start=new Node(d,f);
 		head=start;
 		
-		//Now the rest 5 are created while loop because if we won't make the 1st Node outside then we can't
+		//Now the rest 5 are created inside while loop because if we won't make the 1st Node outside then we can't
 		// hold the references of the Nodes and all the Nodes are gone
 		for(int i=0;i<testcases-1;i++)
 		{
@@ -55,30 +55,31 @@ class Samsung
 		Node current=start;
 		Node forward=start.next;
 		
-		//This TrackOfPackages variable is use so as to keep track that the packgae of the next talented
+		//This TrackOfPackages variable is use so as to keep track that the package of the next talented
 		//person is always greater than the less talented person
         int TrackOfPackage=current.packages;
 		while(forward!=null)
 		{
 			if(current.packages<forward.packages)
 			{
-				/*To understand this case(forward.packages>TrackOfPackage) run program with these test cases->
+				/*To understand this case(forward.packages>TrackOfPackage) run program with these test cases and comment
+				the next 5 line (77-81)->
 				    6
 				    1 4
 				    2 3
 				    3 4
 				    4 3
-                    5 4
+                                    5 4
 				    6 3 
 				*/
 				//For above you get answer as 3 but it should be 1 
 				
-				if(forward.packages>TrackOfPackage)
-                {
-                TrackOfPackage=forward.packages;
+		        if(forward.packages>TrackOfPackage)
+                        {
+                                TrackOfPackage=forward.packages;
 				++count;
-                }
-			}
+                        }
+		}
             current=current.next;
 			forward=forward.next;
         }
