@@ -5,10 +5,10 @@ package OSHEA;
 import java.util.*;
 public class Pair_In_Array_Whose_Sum_Equal_To_Given_Number_x
 {
-	static int target;
 	public static void main(String[] args)
 	{
 		int arr[]={5,2,3,7,8,5};
+		//Given number->
 		int x=10;
         for(int i=0;i<arr.length-1;i++)
         {
