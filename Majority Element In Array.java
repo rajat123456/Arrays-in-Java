@@ -1,6 +1,6 @@
-//Majority element in an Array
-// Time Comp O(n^2) in worst case for Sorting array
-//Space Comple O(n) for use array
+//Majority element in an Array using Linear Search
+//Time Comp O(n^2) in worst case for Sorting array, if array is already sorted then it is O(n/2)=O(n)
+//Space Comple O(1)
 
 import java.util.*;
 public class Main
@@ -11,32 +11,22 @@ public class Main
 		int a=sc.nextInt();
 		int count=0;
 		int arr[]=new int[a];
-		int use[]=new int[a];
 		for(int j=0;j<a;j++)
 		 {
 		     arr[j]=sc.nextInt();
 		 }
 		Arrays.sort(arr);
-		for( int i=0;i<arr.length-1;i++)
+		for( int i=0;i<arr.length/2;i++)
 	       {
-                if(arr[i]==arr[i+1])
+                if(arr[i]==arr[i+arr.length/2])
                 {
-                 ++use[arr[i]];
+                  System.out.println(arr[i]);
+                  System.exit(0);
                 }
+                
 	       }
-	       
-	       for(int j=0;j<use.length;j++)
-	       {
-	           
-	       if(use[j]>=arr.length/2)
-	       {
-	       	System.out.println(j);
-	       	System.exit(0);
-	       }
-	       	
-	       }
-	       
-	       	System.out.println(-1);
+	   
+              System.out.println(-1);
 	       
 	}
 }
