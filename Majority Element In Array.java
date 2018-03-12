@@ -1,5 +1,5 @@
 //Majority element in an Array using Linear Search
-//Time Comp O(n^2) in worst case for Sorting array, if array is already sorted then it is O(n/2)=O(n)
+//Time Comp O(nlogn) for Sorting array, if array is already sorted then it is O(n/2)=O(n)
 //Space Comple O(1)
 
 import java.util.*;
@@ -21,7 +21,7 @@ public class Main
                 if(arr[i]==arr[i+arr.length/2])
                 {
                   System.out.println(arr[i]);
-                  System.exit(0);
+                  return;
                 }
                 
 	       }
