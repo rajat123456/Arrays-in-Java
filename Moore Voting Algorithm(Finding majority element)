@@ -1,0 +1,60 @@
+//Finding majority element using Moore Voting Element
+//Time Comp-> O(n)
+//Space Comp-> O(1)
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int count=0;
+		int arr[]=new int[a];
+		for(int j=0;j<a;j++)
+		 {
+		     arr[j]=sc.nextInt();
+		 }
+	  
+	    //Finding majority element
+	    int major=findmajority(arr);
+        
+        //Checing if that element is really majority element
+	    boolean ismajor=ismajor(arr,major);
+	    if(ismajor==true)
+	    System.out.println(major);
+	    else
+	    System.out.println("No majority element present");
+	}
+	static int findmajority(int array[])
+	{
+	    int major=0;
+	    int count=1;
+	    for(int i=1;i<array.length;i++)
+	      {
+	          if(array[i]==array[major])
+	          ++count;
+	          
+	          else
+	          --count;
+	          
+	          if(count==0)
+	           {
+	               major=i;
+	               count=1;
+	           }
+	      }
+	      return array[major];
+	}
+	
+	static boolean ismajor(int array[],int major)
+      {
+          int count=0;
+          for(int i=0;i<array.length;i++)
+           {
+               if(array[i]==major)
+               ++count;
+           }
+           return (count>array.length/2);
+      }
+}
