@@ -16,16 +16,32 @@ public class Main
 		     arr[j]=sc.nextInt();
 		 }
 		Arrays.sort(arr);
+		
+		//If array has even number of elements
+		if(arr.length%2==0)
 		for( int i=0;i<arr.length/2;i++)
 	       {
                 if(arr[i]==arr[i+arr.length/2])
                 {
                   System.out.println(arr[i]);
+                  //System.exit(0);
                   return;
                 }
                 
 	       }
-	   
+	       
+	       //If array has odd number of elements
+	       else
+	       for( int i=0;i<=arr.length/2;i++)
+	       {
+                if(arr[i]==arr[i+arr.length/2])
+                {
+                  System.out.println(arr[i]);
+                  //System.exit(0);
+                  return;
+                }
+                
+	       }
               System.out.println(-1);
 	       
 	}
