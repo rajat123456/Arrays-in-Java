@@ -12,8 +12,9 @@ class Main {
 		l.add(3);
 		l.add(4);
 		l.add(5);
-		l.get(-1);
-		System.out.println(l);
+		
+		l.get(-1); // Here it gives ArrayIndexOutOfBounds Exception
+		l.get(6);  // Here it gives IndexOutOfBounds Exception
 	}
 
 }
