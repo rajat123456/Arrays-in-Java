@@ -17,9 +17,11 @@ public class Solution {
         {
             arr[i]=arr[i+1]-arr[i];
             
+            // If previous element is greater than 0, then only adding that in the current element
             if(arr[i-1]>0)
                 arr[i]+=arr[i-1];
             
+            // if the current difference is less than thecurrent array element, then update the current difference 
             if(cur_diff<arr[i])
                 cur_diff=arr[i];
         }
