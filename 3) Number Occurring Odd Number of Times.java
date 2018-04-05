@@ -5,7 +5,7 @@
 /* Note:  1) XOR of two elements is 0 if both elements are identical(same)
           2) XOR of a number "x" with 0 is "x" itself.
           3) If any number is repeating even number of times then their XOR leads to 0
-          4) If any number is repeating even number of times then their XOR leads to same number
+          4) If any number is repeating odd number of times then their XOR leads to same number
 */
 
 import java.util.*;
