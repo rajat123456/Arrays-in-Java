@@ -1,4 +1,4 @@
-// A pair in an array whose sum is equal to given number
+// A pair in an array whose sum is equal to given number, using Binary Search
 // Assumption-> If array is Sorted
 // Time Complexity -> O(nlogn) -> logn is for binary search, and we are doing it "n-1" times
 // Space Complexity -> O(1)
