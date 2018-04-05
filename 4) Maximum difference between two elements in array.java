@@ -3,6 +3,16 @@
 // Time Complexity -> O(n)-> Since, we are traversing the original array exactly once
 // Space Complexity -> O(1)-> Since here we are using the variables instead of any extra space
 
+// Some Conditions for this implementation are ->
+
+/* 1) The function assumes that there are 
+      at least two elements in array.
+   
+   2) Output is a negative value if the
+      array is sorted in decreasing order and 
+      
+   3) Output is 0 if elements are equal  */
+
 import java.util.*;
 public class Solution {
 
