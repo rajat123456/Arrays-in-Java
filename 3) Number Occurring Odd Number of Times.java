@@ -6,6 +6,9 @@
           2) XOR of a number "x" with 0 is "x" itself.
           3) If any number is repeating even number of times then their XOR leads to 0
           4) If any number is repeating odd number of times then their XOR leads to same number
+          
+          Since below, only 1 number is occuring odd  number of times, and rest are occuring even numnber of times, so we got 0 for rest
+          of elements and finally we got the numbe itself which is occuring odd number of times
 */
 
 import java.util.*;
