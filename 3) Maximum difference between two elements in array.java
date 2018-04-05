@@ -1,4 +1,5 @@
-// Maximum difference between two elements in an array such that larger element appears after the smaller, Approach 3 (Using Maximum Sum Subarray Concept) Here we didn't use difference array or any extra space
+// Maximum difference between two elements in an array such that larger element appears after the smaller
+// Approach 3 (Using Maximum Sum Subarray Concept) Here we didn't use difference array or any extra space
 // Time Complexity -> O(n)-> Since, we are traversing both the array's(original as well as difference array) only once
 // Space Complexity -> O(1)-> Since here we are using the variables instead of difference array
 
