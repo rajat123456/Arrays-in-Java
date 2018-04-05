@@ -11,7 +11,7 @@ public class Solution {
         int arr[]={1,2,3,4,5,5};
         int sum=7;
         int hash[]=new int[sum+1];
-        for(int i=0;i<arr.length-1;i++)
+        for(int i=0;i<arr.length;i++)
         {
             int temp=sum-arr[i];
             
