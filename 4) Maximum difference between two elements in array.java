@@ -1,4 +1,5 @@
-// Maximum difference between two elements in an array such that larger element appears after the smaller, Approach 4 (Using Minimum so far Concept)
+// Maximum difference between two elements in an array such that larger element appears after the smaller
+// Approach 4 (Using Minimum so far Concept)
 // Time Complexity -> O(n)-> Since, we are the original array exactly once
 // Space Complexity -> O(1)-> Since here we are using the variables instead of any extra space
 
