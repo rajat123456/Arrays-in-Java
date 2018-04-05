@@ -8,7 +8,7 @@
           4) If any number is repeating odd number of times then their XOR leads to same number
           
           Since below, only 1 number is occuring odd number of times, and rest are occuring even numnber of times, so we got 0 for rest
-          of elements and finally we got the numbe itself which is occuring odd number of times
+          of elements and finally we got the number itself which is occuring odd number of times
 */
 
 import java.util.*;
