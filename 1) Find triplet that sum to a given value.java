@@ -10,7 +10,7 @@ public class Main
 		int arr[]={-5,-2,0,1,2,6,9};
 		int target=1;
 		
-		// To keep track that whether Triplt is found or not
+		// To keep track that whether Triplet is found or not
 		boolean found=false;
 		for(int i=0;i<arr.length-2;i++)
 		{
