@@ -1,4 +1,5 @@
 // Time Complexity->O(n)
+// Space Complexity->O(n)*2=>O(n)[Since each element of array contain 2 parts i.e, arr[n][2]
 
 import java.util.*;
 public class Main
