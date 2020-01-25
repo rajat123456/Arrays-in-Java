@@ -1,7 +1,7 @@
 //Drive at Samsung :)
 
 //Implemented via Singly Link List
-//Time Complexity O(n)-> For Traversing Link List
+//Time Complexity O(n)-> For Traversing Linked List
 //Space Complexity O(n)-> For Link List size
 
 package garcia;
