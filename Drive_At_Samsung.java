@@ -1,4 +1,4 @@
-//Walkin Drive at Samsung :)
+//Drive at Samsung :)
 
 //Implemented via Singly Link List
 //Time Complexity O(n)-> For Traversing Link List
