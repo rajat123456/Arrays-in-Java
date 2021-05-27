@@ -7,17 +7,16 @@ Eg: 1 2 3
 Output: 1, 4, 7, 8, 9, 6, 3, 2, 5, END
 
 
-Time Complexity: O((m+n-1)*n)= O(n^2)
+Time Complexity: O( ((m+n)/4) * Math.max(m,n) )= O(n^2)
 Space Complexity: O(1)
 
 */
 
 import java.util.*;
-public class Main
-{
-	public static void main(String[] args) {
-	
-		Scanner sc=new Scanner(System.in);
+public class Main {
+    public static void main(String args[]) {
+
+        Scanner sc=new Scanner(System.in);
 		
         int m=sc.nextInt();
         int n=sc.nextInt();
@@ -33,51 +32,55 @@ public class Main
         }
         
         int p=0;
+        int times=(int)Math.ceil((double)(m+n)/4);
+        boolean flag=true;
         
-        
-        // Overall outer loop run till (no of rows + no of columns -1)
-        for(int d=0; d<(m+n); d++)
+        // Overall outer loop run till { (no of rows + no of columns)/4 } times
+        for(int d=0;d<times;d++)
         {
             // Step 1: Down printing
-            for(int q=0;q<n-p;q++)
+            for(int q=p;q<m-p;q++)
             {
-                if(arr[q+p][p]!=-1)
+                if(arr[q][p]!=-1)
                 {
-                    System.out.print(arr[q+p][p]+", ");
+                    System.out.print(arr[q][p]+", ");
+
+                    // once an alement printed, marking -1, so that not printed again
+                    arr[q][p]=-1;
                 }
                 
-                // once an alement printed, marking -1, so that not printed again
-                arr[q+p][p]=-1;
             }
         
             // Step 2: Right Printing
-            for(int r=p+1;r<m-p;r++)
+            for(int r=p+1;r<n-p;r++)
             {
                 if(arr[m-p-1][r]!=-1)
                 {
                     System.out.print(arr[m-p-1][r]+", ");
+                    arr[m-p-1][r]=-1;
                 }
-                arr[m-p-1][r]=-1;
+
             }
             
             // Step 3: Up Printing
             for(int u=m-p-2;u>=p;u--)
             {
-                if(arr[u][m-p-1]!=-1)
+                if(arr[u][n-p-1]!=-1)
                 {
-                    System.out.print(arr[u][m-p-1]+", ");
+                    System.out.print(arr[u][n-p-1]+", ");
+                    arr[u][n-p-1]=-1;
                 }
-                arr[u][m-p-1]=-1;
             }
             
             // Step 4: Left Printing
-            for(int z=m-p-1;z>p;z--)
+            for(int z=n-p-2;z>p;z--)
             {
                 if(arr[p][z]!=-1)
                 {
                     System.out.print(arr[p][z]+", ");
+                    arr[p][z]=-1;
                 }
-                arr[p][z]=-1;
+
             }
             
             // keep track of printed rows/columns
@@ -86,6 +89,6 @@ public class Main
         
         System.out.print("END");
         
+
     }
-        
 }
